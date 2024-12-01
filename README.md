@@ -49,5 +49,6 @@ Este é um projeto simples de uma lista de tarefas (To-Do List) desenvolvido com
 
 **Prints do projeto:**
 
-\[Insira aqui prints do seu projeto\]
+![Captura de Tela 2024-12-01 às 16 32 39](https://github.com/user-attachments/assets/5f7d65a4-61b6-43f5-81c7-7e5c6939f734)
+
 
