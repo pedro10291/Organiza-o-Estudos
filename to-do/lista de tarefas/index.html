@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <main class="app-container">
+        <header class="app-header">
+            <div>
+                <h1>Lista de Tarefas</h1>
+                <p id="current-date">Sua Lista de hoje</p>
+            </div>
+            <span class="counter" id="task-counter">0</span>
+        </header>
+        <form id="todo-form" class="todo-form">
+            <input type="text" id="todo-input" placeholder="Adicione uma nova tarefa..." required autocomplete="off">
+            <button type="submit" aria-label="Adicionar tarefa">
+                <i class="ph-bold ph-plus"></i>
+            </button>
+        </form>
+        <ul id="todo-list" class="todo-list">
+
+        </ul>
+    </main>
+
+</body>
+
+</html>
