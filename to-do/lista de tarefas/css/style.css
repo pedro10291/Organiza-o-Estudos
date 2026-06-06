@@ -9,15 +9,17 @@
 
 :root {
     --cor-texto: #fafafa;
-    --cor-bg-body: #3a4fd4;
-    --cor-bg-container: #2a3abf;
-    --cor-btn: #3d56f0;
+    --main-border: 1px solid #fafafa;
+    --main-bg: #6a1a1ab2;
+    --btn-troca-bg: #fafafa20;
 }
 
 body {
     width: 100%;
     height: 100dvh;
-    background-color: var(--cor-bg-body);
+    background-color: #a82a2a9c;
+    background-size: cover;
+    background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,15 +28,15 @@ body {
 .app-container {
     width: 300px;
     min-height: 500px;
-    padding: 1.2rem;
-    background-color: var(--cor-bg-container);
-    border-radius: 1.2rem;
+    padding: 1rem;
+    background-color: var(--main-bg);
+    backdrop-filter: blur(4px);
+    border-radius: 1rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
-/* Header */
 .app-header {
     display: flex;
     justify-content: space-between;
@@ -43,20 +45,21 @@ body {
 
 h1 {
     color: var(--cor-texto);
-    font-size: 1.2rem;
-    font-weight: 700;
+    font-size: 1.1rem;
+    font-weight: 500;
+    font-family: "Inter", sans-serif;
 }
 
 #current-date {
-    color: rgba(255, 255, 255, 0.6);
+    color: var(--cor-texto);
     font-size: 0.75rem;
     margin-top: 2px;
-    text-align: left;
 }
 
 .counter {
-    background-color: var(--cor-btn);
+    background-color: var(--btn-troca-bg);
     color: var(--cor-texto);
+    border: var(--main-border);
     font-size: 0.8rem;
     font-weight: 700;
     border-radius: 50%;
@@ -68,7 +71,6 @@ h1 {
     flex-shrink: 0;
 }
 
-/* Formulário */
 .todo-form {
     display: flex;
     gap: 8px;
@@ -79,28 +81,28 @@ input {
     flex: 1;
     height: 38px;
     padding: 0 12px;
-    background: rgba(255, 255, 255, 0.12);
-    border: none;
+    background: var(--btn-troca-bg);
+    border: var(--main-border);
     border-radius: 8px;
     color: var(--cor-texto);
     font-size: 0.82rem;
     outline: none;
-    transition: background 0.3s;
+    transition: 0.3s;
 }
 
 input::placeholder {
-    color: rgba(255, 255, 255, 0.45);
+    color: rgba(250, 250, 250, 0.45);
 }
 
 input:focus {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(250, 250, 250, 0.15);
 }
 
 .todo-form button {
     width: 38px;
     height: 38px;
-    background-color: var(--cor-btn);
-    border: none;
+    background-color: var(--btn-troca-bg);
+    border: var(--main-border);
     border-radius: 10px;
     color: var(--cor-texto);
     font-size: 1.1rem;
@@ -109,14 +111,13 @@ input:focus {
     justify-content: center;
     cursor: pointer;
     flex-shrink: 0;
-    transition: opacity 0.2s;
+    transition: 0.3s;
 }
 
 .todo-form button:hover {
-    opacity: 0.85;
+    background: rgba(250, 250, 250, 0.2);
 }
 
-/* Lista */
 .todo-list {
     list-style: none;
     display: flex;
@@ -124,4 +125,33 @@ input:focus {
     gap: 4px;
 }
 
-/* Os it
+.todo-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 4px;
+}
+
+.todo-item input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--cor-texto);
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.todo-item label {
+    flex: 1;
+    font-size: 0.83rem;
+    color: var(--cor-texto);
+    cursor: pointer;
+}
+
+.todo-item label.concluida {
+    color: rgba(250, 250, 250, 0.45);
+    text-decoration: line-through;
+}
+
+.todo-item .btn-deletar {
+    background: none;
+    border: none;
